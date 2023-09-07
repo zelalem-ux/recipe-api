@@ -7,10 +7,10 @@ This is a RESTful API server for managing recipes. The server allows users to cr
 To get started with the server, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Install the required dependencies by running npm install.
-3. Start the server by running npm start.
+2. Install the required dependencies by running `npm install`.
+3. Start the server by running `npm start`.
 
-The server should now be up and running on http://localhost:3000.
+The server should now be up and running on `http://localhost:3000`.
 
 ## API Endpoints
 
