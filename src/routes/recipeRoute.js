@@ -2,14 +2,18 @@ const express = require('express')
 const RecipeController = require('../controllers/recipeController')
 const { authGuard } = require('../middleware/authMiddleware')
 
-// const multer = require('multer')
-// const storage = multer.memoryStorage()
-// const upload = multer({ storage: storage })
+const multer = require('multer')
+const upload = multer()
 
 const router = express.Router()
 const recipeController = new RecipeController()
 
-router.post('/', authGuard, recipeController.create.bind(recipeController))
+router.post(
+  '/',
+  upload.single('picture'),
+  authGuard,
+  recipeController.create.bind(recipeController)
+)
 router.get('/:id', recipeController.getById.bind(recipeController))
 router.get('/', recipeController.getAll.bind(recipeController))
 router.put(

@@ -1,4 +1,7 @@
+const { uid } = require('uid')
 const RecipeService = require('../services/recipeService')
+const fs = require('fs').promises
+const path = require('path')
 
 class RecipeController {
   constructor() {
@@ -6,10 +9,19 @@ class RecipeController {
   }
 
   async create(req, res) {
+    const picture = req.file
+    const fileExtension = path.extname(file.originalname)
+    const autoGenName = uid(16) + '.' + fileExtension
     const recipe = await this.recipeService.create({
       user: req.userId,
+      image: autoGenName,
       ...req.body,
     })
+
+    const stream = fs.createWriteStream(`uploads/recipes/${autoGenName}`)
+    stream.write(picture.buffer)
+    await stream.end()
+
     res.status(201).json(recipe)
   }
 

@@ -16,6 +16,7 @@ db_connect().then(() => {
 })
 
 app.use(express.json())
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/api/v1/users', userRoutes)
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/recipe', recipeRoutes)
