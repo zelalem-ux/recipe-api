@@ -29,5 +29,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanielsd/recipe-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hanielsd/recipe-api/issues"
+  },
+  "homepage": "https://github.com/hanielsd/recipe-api#readme"
 }
