@@ -33,10 +33,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanielsd/recipe-api.git"
+    "url": "git+https://github.com/zelalem-ux/recipe-api.git"
   },
   "bugs": {
-    "url": "https://github.com/hanielsd/recipe-api/issues"
+    "url": "https://github.com/zelalem-ux/recipe-api/issues"
   },
-  "homepage": "https://github.com/hanielsd/recipe-api#readme"
+  "homepage": "https://github.com/zelalem-ux/recipe-api#readme"
 }
