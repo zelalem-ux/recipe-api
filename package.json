@@ -1,5 +1,5 @@
 {
-  "name": "haniel-express",
+  "name": "zola-express",
   "version": "1.0.0",
   "description": "node+express REST API Server",
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "haniel",
+  "author": "zelalem-haniel",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
